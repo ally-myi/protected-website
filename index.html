@@ -80,17 +80,18 @@ input[type=submit] {
     <input onclick="window.location.href = 'https://ally-myi.github.io/Immigration-Website/';" type="submit" value="Submit" >
   </form>
 </div>
-
+/*Text messages that will appear in order to validate the password. This are also the declaration of variables for the validation of the password within the javascript code */
 <div id="message">
   <h3>Password must contain the following:</h3>
   <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
   <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
   <p id="number" class="invalid">A <b>number</b></p>
-  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+  <p id="length" class="invalid">Minimum <b>10 characters</b></p>
 </div>
 				
 <script>
 //action_page.php
+// declare variables for password validation
 var myInput = document.getElementById("psw");
 var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
@@ -140,7 +141,7 @@ myInput.onkeyup = function() {
   }
   
   // Validate length
-  if(myInput.value.length >= 8) {
+  if(myInput.value.length >= 10) {
     length.classList.remove("invalid");
     length.classList.add("valid");
   } else {
